@@ -10,7 +10,7 @@ class MotorcyclesController < ApplicationController
 
   def create
     motorcycle = Motorcycle.create!(motorcycle_params)
-    redirect_to motorcycle
+    redirect_to motorcycle,notice:"投稿しました"
   end
 
   def show
@@ -21,12 +21,12 @@ class MotorcyclesController < ApplicationController
 
   def update
     @motorcycle.update(motorcycle_params)
-    redirect_to root_path
+    redirect_to root_path, notice: "更新しました"
   end
 
   def destroy
     @motorcycle.destroy!
-    redirect_to root_path
+    redirect_to root_path, alert: "削除しました"
   end
 
 
