@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>UserApp</title>
+    <title>バイク投稿アプリ</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,10 @@
   </head>
 
   <body>
+  <%= link_to "バイク一覧", motorcycles_path%><%= link_to "新規投稿", new_motorcycle_path%>
+  <%= hr %>
+  <%= hr size="10" color="#0000ff" noshade %>
+  
     <%= yield %>
   </body>
 </html>
