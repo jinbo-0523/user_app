@@ -17,9 +17,13 @@ class MotorcyclesController < ApplicationController
   end
 
   def edit
+    @motorcycle = Motorcycle.find(params[:id])
   end
 
   def update
+    motorcycle = Motorcycle.find(params[:id])
+    motorcycle.update(motorcycle_params)
+    redirect_to root_path
   end
 
   def destroy
