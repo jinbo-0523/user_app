@@ -1,14 +1,19 @@
 class MotorcyclesController < ApplicationController
   def index
+
   end
 
   def new
+    @motorcycle = Motorcycle.new
   end
 
   def create
+    motorcycle = Motorcycle.create!(motorcycle_params)
+    redirect_to motorcycle
   end
 
   def show
+    @motorcycle = Motorcycle.find(params[:id])
   end
 
   def edit
@@ -18,5 +23,10 @@ class MotorcyclesController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+  def motorcycle_params
+    params.require(:motorcycle).permit(:name,:displacement,:car_type,:content)
   end
 end
