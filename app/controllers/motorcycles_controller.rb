@@ -23,6 +23,9 @@ class MotorcyclesController < ApplicationController
   end
 
   def destroy
+    motorcycle = Motorcycle.find(params[:id])    
+    motorcycle.destroy!
+    redirect_to root_path
   end
 
   private

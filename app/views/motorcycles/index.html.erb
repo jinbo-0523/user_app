@@ -17,7 +17,7 @@
         <td>
           <%= link_to "詳細", motorcycle_path(moto) %>
           <%= link_to "編集", edit_motorcycle_path(moto)%>
-          <%= link_to "削除", motorcycle_path(moto), method: :delete %>
+          <%= link_to "削除", motorcycle_path(moto), method: :delete , data: { confirm: "削除しますか?" }%>
         </td>
       </tr>
     <% end %>
