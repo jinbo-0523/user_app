@@ -1,6 +1,6 @@
 class MotorcyclesController < ApplicationController
   def index
-
+    @motorcycles = Motorcycle.order(id: :asc)
   end
 
   def new
