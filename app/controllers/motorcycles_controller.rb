@@ -1,4 +1,5 @@
 class MotorcyclesController < ApplicationController
+  before_action :set_motorcycle, only: %i[show edit update destroy]
   def index
     @motorcycles = Motorcycle.order(id: :asc)
   end
@@ -13,25 +14,25 @@ class MotorcyclesController < ApplicationController
   end
 
   def show
-    @motorcycle = Motorcycle.find(params[:id])
   end
 
   def edit
-    @motorcycle = Motorcycle.find(params[:id])
   end
 
   def update
-    motorcycle = Motorcycle.find(params[:id])
-    motorcycle.update(motorcycle_params)
+    @motorcycle.update(motorcycle_params)
     redirect_to root_path
   end
 
   def destroy
-    motorcycle = Motorcycle.find(params[:id])    
-    motorcycle.destroy!
+    @motorcycle.destroy!
     redirect_to root_path
   end
 
+
+  def set_motorcycle
+    @motorcycle = Motorcycle.find(params[:id])
+  end
   private
   def motorcycle_params
     params.require(:motorcycle).permit(:name,:displacement,:car_type,:content)
