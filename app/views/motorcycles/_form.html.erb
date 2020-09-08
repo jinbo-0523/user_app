@@ -12,11 +12,11 @@
   </div>
   <div>
     <%= form.label :car_type %>
-    <%= form.select :car_type, [["ネイキッド", "ネイキッド" ],["アメリカン", "アメリカン"],["スーパースポーツ", "スーパースポーツ"],["オフロード","オフロード"],["アドベンチャー","アドベンチャー"],["ツアラー","ツアラー"],["ビックスクーター","ビックスクーター"],["原付","原付"]]%>
+    <%= form.select :car_type, Motorcycle::CAR_TYPE_LIST %>
   </div>
   <div>
     <%= form.label :content %>
-    <%= form.text_area :content, :cols => 40, :rows => 10%>
+    <%= form.text_area :content, cols: 40, rows: 10 %>
   </div>
   <div>
     <%= form.submit button_value %>
