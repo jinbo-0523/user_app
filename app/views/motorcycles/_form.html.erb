@@ -1,19 +1,19 @@
 <%=  form_with model: @motorcycle, local: true do |form|%>
   <div>
-    <%= form.label :name,"バイク名"%>
+    <%= form.label :name%>
     <%= form.text_field :name%>
   </div>
   <div>
-    <%= form.label :displacement,"排気量" %>
+    <%= form.label :displacement %>
     <%= form.text_field :displacement %>
     cc
   </div>
   <div>
-    <%= form.label :car_type,"種類" %>
+    <%= form.label :car_type %>
     <%= form.select :car_type, [["ネイキッド", "ネイキッド" ],["アメリカン", "アメリカン"],["スーパースポーツ", "スーパースポーツ"],["オフロード","オフロード"],["アドベンチャー","アドベンチャー"],["ツアラー","ツアラー"],["ビックスクーター","ビックスクーター"],["原付","原付"]]%>
   </div>
   <div>
-    <%= form.label :content,"説明" %>
+    <%= form.label :content %>
     <%= form.text_area :content, :cols => 40, :rows => 10%>
   </div>
   <div>
