@@ -1,12 +1,13 @@
 <nav class="navbar navbar-expand-sm navbar-light bg-success fixed-top">
   <a class="navbar-brand " href="#">バイク投稿アプリ</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" >
+  <%# HTMLにもあるタグだから説明はそっちの方が                               ↑bootstrap                        ↑bootstrap                        ↑bootstrap  %>
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <div class="navbar-nav">
-        <%= link_to "バイク一覧", motorcycles_path %>
-        <%= link_to "新規投稿", new_motorcycle_path %>
+        <%= link_to "バイク一覧", motorcycles_path , class: "nav-item nav-link active" %>
+        <%= link_to "新規投稿", new_motorcycle_path , class: "nav-item nav-link active" %>
     </div>
   </div>
 </nav>
