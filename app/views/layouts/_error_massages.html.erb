@@ -1,7 +1,7 @@
 <% if @motorcycle.errors.any? %>
   <div>
     <ul>
-      <%= @motorcycle.errors.full_message.each do |msg| %>
+      <%= @motorcycle.errors.full_messages.each do |msg| %>
         <li><span style="color: red;"><%= msg %></li></span>
       <% end %>
     </ul>
