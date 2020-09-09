@@ -10,10 +10,14 @@
   </head>
 
   <body>
-  <%= render "layouts/header" %>
-  <%= render "layouts/flash" %>
-  <hr size="10" color="#0000ff" noshade >
-  
-    <%= yield %>
+    <header>
+      <%= render "layouts/header" %>
+    </header>
+    <main>
+      <%= render "layouts/flash" %>
+      <div class="base-container">
+        <%= yield %>
+      </div>
+    </main>
   </body>
 </html>
