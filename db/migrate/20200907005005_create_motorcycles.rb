@@ -4,7 +4,7 @@ class CreateMotorcycles < ActiveRecord::Migration[6.0]
       t.string :name ,null: false
       t.integer :displacement, null: false
       t.text :type, null: false
-      t.text_area :content
+      t.text :content
 
       t.timestamps
     end

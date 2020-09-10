@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2020_09_07_045210) do
   create_table "motorcycles", force: :cascade do |t|
     t.string "name", null: false
     t.integer "displacement", null: false
-    t.string "car_type", null: false
+    t.text "car_type", null: false
     t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
