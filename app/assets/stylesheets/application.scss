@@ -39,3 +39,14 @@
 body {
   padding-top: 56px;
 }
+
+th,
+td {
+  vertical-align: middle !important;
+  // vertical-align(css)がmiddle。!importantで最優先提要
+}
+
+.break-word {
+  word-break: break-word;
+  // word-break→cssのプロパティ
+}
