@@ -1,9 +1,11 @@
 <% if @motorcycle.errors.any? %>
-  <div>
-    <ul>
-      <%= @motorcycle.errors.full_messages.each do |msg| %>
-        <li><span style="color: red;"><%= msg %></li></span>
-      <% end %>
-    </ul>
-  </div>
+  <% @motorcycle.errors.full_messages.each do |msg| %>
+  <%# errors.full_messagesは全てのエラーメッセージを配列で取得 %>
+    <div class="alert alert-danger" role="alert">
+    <%# role="alert"は単なる役割設定だけ   多分%>
+      <a href="#" class="close" data-dismiss="alert">×</a>
+      <%# data-* という属性はHTML5で追加された「自分で勝手に属性値を作れる」独自データ属性というもの %>
+      <%= msg %>
+    </div>
+  <% end %>
 <% end %>
