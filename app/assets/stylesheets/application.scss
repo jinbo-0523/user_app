@@ -60,3 +60,18 @@ td {
 .alert-alert {
   @extend .alert-danger;
 }
+
+#motorcycle_name {
+  width: 40%;
+  display: inline-block;
+}
+
+#motorcycle_displacement {
+  width: 100px;
+  display: inline-block;
+}
+
+#motorcycle_car_type {
+  width: 280px;
+  display: inline-block;
+}
